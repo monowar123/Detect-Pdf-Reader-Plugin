@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="Detect_PDF_Reader.js"></script>
+</head>
+
+<body>
+	<p id="browserName"></p>
+	<p id="pdfReader"></p>
+	<p id="pdfReaderName"></p>
+	<p id="pdfReaderVersion"></p>
+	
+	<script>
+		var info = pdfReaderPluginInfo();
+		//alert(info.browserName+ " ->" + info.pdfReader + " ->" + info.pdfReaderName + " ->" + info.pdfReaderVersion);
+
+		document.getElementById("browserName").innerHTML = "Browser: " + info.browserName;
+		document.getElementById("pdfReader").innerHTML = "PDF Reader: " + info.pdfReader;
+		document.getElementById("pdfReaderName").innerHTML = "Reader Name: " + info.pdfReaderName;
+		document.getElementById("pdfReaderVersion").innerHTML = "Reader Version: " + info.pdfReaderVersion;
+	</script>
+</body>
+</html>
